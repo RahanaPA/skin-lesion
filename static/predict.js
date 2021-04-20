@@ -18,7 +18,7 @@ $("#image-selector").change(function () {
 let model;
 (async function () {
 	
-	 model = await tf.loadModel('https://rahanapa.github.io/skin-lesion/tfjs_dir/model.json');	
+	 model = await tf.loadModel('https://rahanapa.github.io/skin-lesion/tfjs-models/model.json');	
 	 $("#selected-image").attr("src", "https://rahanapa.github.io/skin-lesion/assets/samplepic.jpg")
 	// Hide the model loading spinner
     $('.progress-bar').hide();
