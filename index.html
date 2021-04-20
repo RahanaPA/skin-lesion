@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Skin Lesion Analyser</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity = "sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <style>
+           img {
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        padding: 0px;
+        width: 375px;
+        height: 355px;
+      }
+      body {
+        color: rgb(14, 4, 4);
+        background: rgb(115, 153, 179);
+        font-family: "Work Sans", sans-serif;
+        text-align: center;
+      }
+      h6 {
+        font-size: 12px;
+        font-style: italic;
+      }
+      p {
+        right: 0px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        padding: 5px;
+        width: 400px;
+        height: 355px;
+        text-indent: 0px;
+        font-size: 22px;
+      }
+      h2 {
+        text-align: center;
+      }
+      /* h1 {
+        border-radius: 25px;
+         background: rgba(6, 197, 245, 0.137); 
+        padding: 20px;
+        width: 800px;
+        height: 80px;
+        font-weight: bold;
+      }  */
+      .button,
+      .button1 {
+        border: none;
+        color: rgb(7, 1, 1);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        /* margin: 4px 2px; */
+        margin-right: 25%;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .button1 {
+        background-color: #97ced4;
+      }
+      .button1:hover {
+        background-color: #97e6e3;
+      }
+      .ml-3 {
+        text-align: center;
+      }
+
+      .imaget {
+        margin-left: 500%;
+      }
+
+      .p-left {
+        text-align: left;
+      }
+    </style>
+</head>
+
+<body>
+    <main>
+      <div class="container mt-5">
+        <!-- <div class="row">
+                <div class="col-12">
+                    <div class="progress progress-bar progress-bar-striped progress-bar-animated mb-2">Loading Model</div>
+                </div>
+            </div> -->
+        <div class="row">
+          <div class="col-12">
+            <h1 class="ml-3 heading">SKIN LESION CLASSIFIER</h1>
+          </div>
+        </div>
+
+        <span style="display: block; height: 5px"></span>
+        <div class="row">
+          <div class="col-6">
+            <h2 class="ml-3 float-left imaget">
+              <span style="display: inline-block; width: 45px"></span
+              >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image
+            </h2>
+            <br />
+            <br />
+            <img id="selected-image" class="ml-3 float-left" src="./assets/samplepic.jpg" />
+          </div>
+          <div class="col-6">
+            <h2 class="ml-3">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predictions
+            </h2>
+
+            <p id="prediction-list" class="float-right p-left"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <input id="image-selector" class="button" type="file" />
+          </div>
+          <div class="col-6">
+            <button id="predict-button" class="button1 float-right">
+              Predict
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"></script>
+    <script src="static/skin_classes.js"></script>
+    <script src="static/predict.js"></script>
+  </body>
+</html>          
